@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One UI 8.5 Control Center</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'SamsungOne', sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .control-center {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20p
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  .slider-container {
+    margin-bottom: 15px;
+  }
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.5);
+    outline: none;
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .toggle {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.3);
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .toggle.active {
+    background: rgba(0,150,255,0.7);
+    color: #fff;
+  }
+  .music-controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 15px;
+  }
+  .music-controls button {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+<div class="control-center">
+  <div class="slider-container">
+    <label>Brightness</label>
+    <input type="range" class="slider" min="0" max="100" value="50">
+  </div>
+  <div class="slider-container">
+    <label>Volume</label>
+    <input type="range" class="slider" min="0" max="100" value="50">
+  </div>
+  <div class="toggles">
+    <div class="toggle" onclick="this.classList.toggle('active')">Wi-Fi</div>
+    <div class="toggle" onclick="this.classList.toggle('active')">Bluetooth</div>
+    <div class="toggle" onclick="this.classList.toggle('active')">Flashlight</div>
+    <div class="toggle" onclick="this.classList.toggle('active')">DND</div>
+    <div class="toggle" onclick="this.classList.toggle('active')">Mobile Data</div>
+    <div class="toggle" onclick="this.classList.toggle('active')">Airplane</div>
+  </div>
+  <div class="music-controls">
+    <button>&laquo;</button>
+    <button>&#9658;</button>
+    <button>&raquo;</button>
+  </div>
+</div>
+<script>
+  // Optional: Add slider animation or music button functionality here
+</script>
+</body>
+</html>
